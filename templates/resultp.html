@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/newpizza.css') }}"> 
+	   <title>Prediction</title>
+	</head>
+
+
+<body>
+    <h1>Eat & Have Fun !!!</h1>
+    <div class="login">
+        <h2><marquee behavior="alternate" direction="right"  bgcolor="black"><font color="pink"> Pizza Liking Prediction </font></marquee></h2>
+        <br>
+        <form action="{{ url_for('pizza')}}" method="POST">
+            <h3>Enter  age</h3>
+            <input type="text" name="age" placeholder="age" required="required"/>
+            <br>
+            <h3>Enter  weight</h3>
+            <input type="text" name="weight" placeholder="weight" required="required"/>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large"> SUBMIT </button>
+        </form>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>

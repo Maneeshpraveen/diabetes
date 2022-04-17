@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body bgcolor="silver">  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleindex.css') }}">  
+  <title>Prediction</title>  
+</head>
+<body>
+    
+    <div class="login center">
+        <h2>To proceed with the prediction, select the dataset.</h2>
+        <br>
+        <form action="{{ url_for('rpizza')}}" method="POST">     
+            <button id="pizza" type="submit" 
+                    class="btn btn-primary btn-block btn-large">Pizza Liking prediction</button>
+        </form>
+        <br>
+        <form action="{{ url_for('rfuel')}}" method="POST">
+            <button id="fuel" type="submit" 
+                    class="btn btn-primary btn-block btn-large">Fuel Price prediction</button>
+        </form>
+	<br>
+
+	<form action ="{{url_for('rdiabetes')}}" method ="POST">
+	     <button id ="diabetes" type ="submit"
+		     class="btn btn-primary btn-block btn-large"> Diabetes prediction </button>
+	</form>
+
+        
+    </div>
+</body>
+</html>
